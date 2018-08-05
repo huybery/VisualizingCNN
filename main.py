@@ -5,6 +5,8 @@ from torchvision.transforms import transforms
 import numpy as np
 import cv2
 from functools import partial
+import matplotlib
+matplotlib.use('agg')
 import matplotlib.pyplot as plt
 
 from models import Vgg16Conv
@@ -132,4 +134,5 @@ if __name__ == '__main__':
         plt.imshow(img)
         # plt.colorbar()
 
-    plt.show()
+    # plt.show()
+    plt.savefig('result.jpg')
